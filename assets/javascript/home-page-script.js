@@ -1,11 +1,11 @@
-import { DateTime } from "./date_time_logic.js";
-import { BatteryHelper } from "./battery_helper.js";
-import { NetworkHelper } from "./network_helper.js";
-import { WindowManager } from "./window_manager.js";
-import { ResumeManager } from "./resume-page-script.js";
-import { ParticleJs } from "./particle-js.js";
-import { VideoOptimizer } from "./video-optimizer.js";
-import { FormHandler } from "../ajax/submit-form-ajax.js";
+import { DateTime } from "/assets/javascript/date_time_logic.js";
+import { BatteryHelper } from "/assets/javascript/battery_helper.js";
+import { NetworkHelper } from "/assets/javascript/network_helper.js";
+import { WindowManager } from "/assets/javascript/window_manager.js";
+import { ResumeManager } from "/assets/javascript/resume-page-script.js";
+import { ParticleJs } from "/assets/javascript/particle-js.js";
+import { VideoOptimizer } from "/assets/javascript/video-optimizer.js";
+import { FormHandler } from "/assets/ajax/submit-form-ajax.js";
 
 window.addEventListener("load", () => {
     document.documentElement.classList.add("theme-ready");
@@ -44,10 +44,10 @@ const themeTooggler = () => {
     // update icon based on theme
     const updateThemeIcon = (theme) => {
         if (theme === "dark") {
-            iconImg.src = "./assets/icons/light-icon.png";
+            iconImg.src = "/assets/icons/light-icon.png";
             iconImg.alt = "Switch to light mode";
         } else {
-            iconImg.src = "./assets/icons/dark-icon.png";
+            iconImg.src = "/assets/icons/dark-icon.png";
             iconImg.alt = "Switch to dark mode";
         }
     };
@@ -100,16 +100,16 @@ const updateBatteryStatus = async () => {
         batteryText.textContent = `${level}%`;
 
         if (charging) {
-            batteryIcon.src = "./assets/icons/battery-charging.png";
+            batteryIcon.src = "/assets/icons/battery-charging.png";
             return;
         }
 
         if (level <= 15) {
-            batteryIcon.src = "./assets/icons/battery-critical.png";
+            batteryIcon.src = "/assets/icons/battery-critical.png";
         } else if (level <= 60) {
-            batteryIcon.src = "./assets/icons/battery-half.png";
+            batteryIcon.src = "/assets/icons/battery-half.png";
         } else {
-            batteryIcon.src = "./assets/icons/battery-full.png";
+            batteryIcon.src = "/assets/icons/battery-full.png";
         }
     };
 
@@ -129,8 +129,8 @@ const updateNetworkStatus = () => {
 
     const renderNetwork = (isOnline) => {
         networkIcon.src = isOnline
-            ? "./assets/icons/network-online.png"
-            : "./assets/icons/network-offline.png";
+            ? "/assets/icons/network-online.png"
+            : "/assets/icons/network-offline.png";
     };
 
     // INITIAL STATE
@@ -156,7 +156,7 @@ const initNavIconListener = () => {
         window_manager.open({
             id: "portfolio",
             title: "Portfolio",
-            contentUrl: "./assets/html/pages/portfolio.html"
+            contentUrl: "/assets/html/pages/portfolio.html"
         });
     });
 
@@ -164,7 +164,7 @@ const initNavIconListener = () => {
         window_manager.open({
             id: "resume",
             title: "Resume",
-            contentUrl: "./assets/html/pages/resume.html"
+            contentUrl: "/assets/html/pages/resume.html"
         }).then(() => {
             resume_manager.initResumeManager();
         });
@@ -174,7 +174,7 @@ const initNavIconListener = () => {
         window_manager.open({
             id: "projects",
             title: "Projects",
-            contentUrl: "./assets/html/pages/projects.html"
+            contentUrl: "/assets/html/pages/projects.html"
         }).then(() => {
             VideoOptimizer.init();
         });
@@ -184,7 +184,7 @@ const initNavIconListener = () => {
         window_manager.open({
             id: "skills",
             title: "Fields of Expertise",
-            contentUrl: "./assets/html/pages/skills.html"
+            contentUrl: "/assets/html/pages/skills.html"
         });
     });
 
@@ -197,7 +197,7 @@ const initNavIconListener = () => {
 
         title: "Achievements & Certifications",
 
-        contentUrl: "./assets/html/pages/achievements.html"
+        contentUrl: "/assets/html/pages/achievements.html"
 
     });
 
@@ -207,7 +207,7 @@ const initNavIconListener = () => {
         window_manager.open({
             id: "contact",
             title: "Contact Details",
-            contentUrl: "./assets/html/pages/contact.html"
+            contentUrl: "/assets/html/pages/contact.html"
         }).then(() => {
             form_handler.initFormHandler(this);
         });

@@ -1,4 +1,4 @@
-@import "./assets/css/master_theme_ui.css";
+@import "/assets/css/master_theme_ui.css";
 
 /* ===================== RESET ===================== */
 * {
@@ -205,7 +205,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("./assets/image/bg_image.png");
+    background-image: url("/assets/image/bg_image.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25%;
