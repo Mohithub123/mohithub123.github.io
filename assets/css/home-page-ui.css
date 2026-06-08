@@ -1,0 +1,309 @@
+@import "/assets/css/master_theme_ui.css";
+
+/* ===================== RESET ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--grad-1);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+}
+
+/* for particles  */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* ===================== MAIN CONTAINER / HERO ===================== */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: var(--space-lg);
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    max-width: 80vw;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-md);
+    margin: var(--space-lg);
+    background: var(--grad-2);
+    /* updated gradient for hero */
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================== NAVIGATION CONTAINER ===================== */
+.navigation-container {
+    width: 100%;
+    height: 100%;
+    max-width: 54vw;
+    max-height: 9vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: var(--space-md);
+    /*margin: var(--space-lg);
+    margin-bottom: 3rem; */
+    background: var(--grad-2);
+    /* updated gradient for nav */
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+    opacity: 0.7;
+}
+
+.navigation-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== NAV ICONS ===================== */
+.nav-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--radius-md);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-icons img {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.15rem;
+    filter: var(--icon-filter);
+
+}
+
+.nav-icons p {
+    font-family: var(--font-mono);
+    font-size: var(--text-size-xs);
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+/* hover state */
+.nav-icons:hover {
+    background: var(--grad-2);
+    /* subtle hover gradient */
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.nav-icons:hover img {
+    filter: var(--icon-filter-hover);
+}
+
+
+/*  top status bar  */
+.top-status-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background: var(--grad-2);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1000;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.top-status-bar .status-icon {
+    color: var(--color-text);
+    width: 1rem;
+    height: 1rem;
+    margin: 0 var(--space-sm);
+    cursor: pointer;
+}
+
+.top-status-bar .status-icon img {
+    width: 100%;
+    height: 100%;
+    filter: var(--icon-filter);
+}
+
+.status-icon:hover {
+    filter: var(--icon-filter-hover);
+}
+
+.dateTimeField {
+    font-family: var(--font-mono);
+    font-size: var(--text-size-xs);
+    font-weight: 400;
+    margin: 0.8rem var(--space-md) 0.3rem;
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-text);
+}
+
+.battery p {
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 100;
+    position: relative;
+    top: -0.2rem;
+}
+
+.no-hover:hover {
+    filter: none;
+}
+
+
+/*  for water mark like background image  */
+.watermark-bg {
+    width: 100%;
+    height: 100%;
+    max-width: 80vw;
+    max-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.watermark-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/image/bg_image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    opacity: 0.09;
+    /* watermark transparency */
+    filter: grayscale(80%) contrast(80%) brightness(110%) blur(0.5px);
+
+    pointer-events: none;
+    /* no hover / no interaction */
+    z-index: 1;
+}
+
+/* ensure content stays above watermark */
+.watermark-bg>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* for terminal display  */
+.terminal-loader {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    width: 45%;
+    background: transparent;
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.2;
+    z-index: 2;
+    pointer-events: none;
+    text-shadow: 0 0 1px var(--color-text);
+    /* Essential for wrapping and cursor flow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#typed-text {
+    display: inline;
+}
+
+
+.terminal-cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: var(--color-primary);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* ================for mobile screen ===================== */
+@media (max-width: 768px) {
+    .hero {
+        max-width: 90vw;
+        max-height: 50vh;
+        margin: var(--space-md);
+    }
+
+    .navigation-container {
+        max-width: 100%;
+        max-height: 8vh;
+    }
+
+    .nav-icons {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .nav-icons img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .nav-icons p {
+      display: none;
+    }
+
+    .terminal-loader {
+        top: 10%;
+        left: 3%;
+        width: 90%;
+        font-size: 0.8rem;
+        text-shadow: none;
+    }
+
+    .watermark-bg::before{
+        background-size: 80%;
+    }
+}

@@ -1,0 +1,145 @@
+@import "/assets/css/master_theme_ui.css";
+
+.window {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 72vw;
+    height: 68vh;
+    background: var(--color-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    user-select: none;
+}
+
+.window-content {
+    flex: 1 1 auto;
+    overflow: auto;
+    min-height: 0;
+    padding: var(--space-sm);
+    font-family: var(--font-mono);
+}
+
+
+.window .window-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    padding: var(--space-xs);
+    cursor: grab;
+    z-index: 1;
+}
+
+.window-header:active {
+    cursor: grabbing
+}
+
+.window.maximized {
+    top: 3rem !important;
+    left: 0.5rem !important;
+    width: 98vw !important;
+    height: calc(100vh - var(--dock-height, 0px)) !important;
+    border-radius: 0 !important;
+    margin-right: 4rem;
+}
+
+
+.window-header .window-title {
+    font-family: var(--font-mono);
+    font-size: var(--text-size-xs);
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.window-header .window-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    margin-right: var(--space-xs);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.window-controls .window-btn {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.window-controls .close-btn {
+    background-color: var(--btn-close);
+}
+
+.window-controls .minimize-btn {
+    background: var(--btn-minimize);
+}
+
+.window-controls .maximize-btn {
+    background: var(--btn-maximize);
+}
+
+@media (max-width: 768px) {
+    .window {
+        left: 5%;
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+
+
+.nav-icons img{
+
+    width:32px;
+    height:32px;
+    object-fit:contain;
+
+}
+
+
+
+#icon_achievements img{
+
+    filter: grayscale(100%) brightness(0) drop-shadow(0 0 0 black);
+    transform: scale(1.15);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hide top status icons only */
+
+.status-icon{
+
+    display:none;
+
+}
+
+
+/* keep date time visible */
+
+.dateTimeField{
+
+    display:block;
+
+}
