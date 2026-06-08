@@ -38,11 +38,13 @@ Built with a focus on clean UI, animations, and user experience.
 - JavaScript (ES6)
 
 ### Concepts Used
-- DOM Manipulation
+- DOM Manipulation (Document Object Model)
 - JavaScript Modules
 - Async Programming
 - Browser APIs
 - Responsive Web Design
+- CSS Animations
+- Component-Based File Structure
 
 ---
 
