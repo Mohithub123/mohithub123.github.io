@@ -134,3 +134,53 @@
     border:none;
 
 }
+
+
+
+
+
+
+
+
+
+
+/* Mobile Resume Responsive Fix */
+
+@media screen and (max-width:768px){
+
+
+.resume-container{
+    width:100% !important;
+    padding:10px !important;
+    box-sizing:border-box;
+}
+
+
+.resume-viewer,
+.pdf-viewer{
+    width:100% !important;
+    height:70vh !important;
+
+    display:flex !important;
+    justify-content:center !important;
+
+    overflow:auto !important;
+}
+
+
+iframe,
+embed,
+object{
+    width:100% !important;
+    max-width:100% !important;
+
+    height:70vh !important;
+}
+
+
+canvas{
+    max-width:100% !important;
+    height:auto !important;
+}
+
+}

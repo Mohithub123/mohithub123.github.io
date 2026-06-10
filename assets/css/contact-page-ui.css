@@ -367,3 +367,136 @@
     box-shadow:0 6px 18px rgba(37,99,235,0.4);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Contact Fix */
+
+@media screen and (max-width:768px){
+
+    .contact-container{
+
+        width:100%;
+        padding:20px;
+        box-sizing:border-box;
+
+    }
+
+        .contact-container h2{
+
+        margin-bottom:15px;
+
+    }
+
+
+    .contact-card{
+
+        margin-bottom:15px;
+
+    }
+
+
+    .contact-card{
+
+        width:100%;
+        max-width:260px;
+        margin:auto;
+
+    }
+
+    .contact-form{
+
+    margin-top:25px;
+
+}
+
+
+    .contact-card p,
+    .contact-card a{
+
+        word-break:break-word;
+        overflow-wrap:anywhere;
+
+    }
+
+
+    /* Github Linkedin Fix */
+
+    .social-buttons{
+
+        display:flex !important;
+
+        flex-direction:row !important;
+
+        justify-content:center !important;
+
+        align-items:center !important;
+
+        gap:15px !important;
+
+        flex-wrap:nowrap !important;
+
+    }
+
+
+    .social-buttons a{
+
+        width:120px !important;
+
+        height:45px !important;
+
+
+        display:flex !important;
+
+        flex-direction:row !important;
+
+
+        justify-content:center !important;
+
+        align-items:center !important;
+
+
+        gap:8px !important;
+
+
+        padding:8px 12px !important;
+
+
+        white-space:nowrap !important;
+
+        word-break:normal !important;
+
+        overflow-wrap:normal !important;
+
+    }
+
+
+    .social-buttons img{
+
+        width:22px !important;
+
+        height:22px !important;
+
+    }
+
+
+    .contact-form button{
+
+        align-self:center;
+
+    }
+
+}

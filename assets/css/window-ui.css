@@ -143,3 +143,45 @@
     display:block;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Responsive Fix */
+
+@media screen and (max-width:768px){
+
+.main-container{
+    width:100vw;
+    overflow:hidden;
+}
+
+
+.window-container{
+    width:90vw !important;
+    height:80vh !important;
+
+    margin-left:auto !important;
+    margin-right:auto !important;
+
+    overflow-y:auto;
+}
+
+
+.navigation-container{
+    width:85vw !important;
+}
+
+}

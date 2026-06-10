@@ -288,3 +288,102 @@ a {
     border-radius:10px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FINAL PROJECT MOBILE WIDTH FIX */
+
+@media screen and (max-width:768px){
+
+
+    .projects-container{
+
+        width:100% !important;
+
+        padding:15px !important;
+
+        box-sizing:border-box !important;
+
+    }
+
+
+    .project-card{
+
+        width:82vw !important;
+
+        max-width:330vw !important;
+
+
+        padding:25px !important;
+
+        margin:0 auto 25px auto !important;
+
+
+        display:flex !important;
+
+        flex-direction:column !important;
+
+
+        align-items:center !important;
+
+        text-align:center !important;
+
+
+        box-sizing:border-box !important;
+
+    }
+
+
+    .project-content,
+    .project-info,
+    .project-description,
+    .project-image{
+
+        width:100% !important;
+
+        max-width:none !important;
+
+    }
+
+
+    .project-card p{
+
+        width:100% !important;
+
+        max-width:100% !important;
+
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+    .project-card img{
+
+        width:80% !important;
+
+        max-width:250px !important;
+
+
+        height:auto !important;
+
+        margin:20px auto !important;
+
+    }
+
+}
